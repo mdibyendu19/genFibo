@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+{% block content %}
+	<div class="container mt-4 text-center" style="    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);">
+	  	<h4 >The nth term is {{ result }}</h4>
+	  	<p>The time  taken to execute is {{ response.content_type }}</p>
+	  	<a class="btn btn-primary" href="{% url 'index' %}">Back</a>
+	</div>
+
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+
+{% block content %}
+	<div class="jumbotron text-center">
+	  <h1>App to generate nth Fibonacci number</h1>
+	  <p>Enter the input N to get the nth term of fibonacci series</p> 
+	</div>
+	  
+	<div class="container mt-4">
+	  <div class="row">
+	    <div class="col-sm-3">
+	    </div>
+	    <div class="col-sm-6">
+			<div class="container">
+			  <form method="POST" action="{% url 'generate' %}">
+			  	{% csrf_token %}
+
+			    <div class="form-group" action="generate/" method="POST">
+			      <input type="text" class="form-control" id="fib_num" name="fib_num" placeholder="Enter the number">
+			    </div>
+			    <button type="submit" class="btn btn-primary">Submit</button>
+			  </form>
+			</div>
+	    </div>
+	  </div>
+	</div>
+
+{% endblock %}
