@@ -17,5 +17,5 @@ class StatsMiddleware(MiddlewareMixin):
 
         # Add the header.
         response["X-Page-Generation-Duration-ms"] = int(duration * 1000)
-        response.content = response.content+b" <div class=\"mt-4 text-center\" style=\"position: absolute;top: 50%;left: 65%;-moz-transform: translateX(-50%) translateY(-45%);-webkit-transform: translateX(-50%) translateY(-45%);transform: translateX(-50%) translateY(-45%);\">Time taken "+str.encode(response["X-Page-Generation-Duration-ms"]) + b" ms</p>"
+        response.content = response.content+b" <div class=\"mt-4 text-center\" style=\"position: absolute;top: 65%;left: 75%;-moz-transform: translateX(-50%) translateY(-45%);-webkit-transform: translateX(-50%) translateY(-45%);transform: translateX(-50%) translateY(-45%);\">Time taken "+str.encode(response["X-Page-Generation-Duration-ms"]) + b" ms</p>"
         return response
