@@ -13,4 +13,4 @@ def index(request):
 def generate(request):
 	num = request.POST['fib_num']
 	result = utils.generateFib(num)
-	return TemplateResponse(request, 'generate.html', {'result': result, 'gen_duration_time_777':0})
+	return TemplateResponse(request, 'generate.html', {'result': result, 'num': num})
